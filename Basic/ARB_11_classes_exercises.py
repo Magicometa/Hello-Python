@@ -124,5 +124,15 @@ empleado.pago()
 # 10. Crea una clase "Store" que tenga una propiedad "inventory" (una lista de productos). Añade un método para agregar un producto al inventario y otro para mostrar todos los productos disponibles.
 class Store:
     def __init__(self, inventory):
-        pass
+        self.inventory = inventory
 
+    def add(self, nuevo):
+        self.inventory.append(nuevo)
+
+    def mostrar(self):
+        for producto in self.inventory:
+            print(producto)
+
+productos = Store(["Coca cola", "Nestea", "Fanta"])
+productos.add("Chocolate")
+productos.mostrar()
